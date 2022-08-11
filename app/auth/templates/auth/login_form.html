@@ -1,0 +1,25 @@
+{% extends 'base_template.html' %}
+
+{% block title %} login {% endblock %}
+
+{% block content %}
+<div class="login-page">
+    <div class="form">
+      <form class="login-form" action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <div class="titulo_form">INGRESO DE USUARIOS</h1></div>
+        {{ form.email }}
+        {% for error in form.email.errors %}
+        <span style="color: red;">{{ error }}</span>
+        {% endfor %}
+        {{ form.password }}
+        {% for error in form.password.errors %}
+        <span style="color: red;">{{ error }}</span>
+        {% endfor %}
+        {{ form.submit() }}
+        {{ form.remember_me() }} {{ form.remember_me.label }}
+        <p class="message">No estas registrado? <a href="{{url_for('auth.show_signup_form')}}">Registrate aquí</a></p>
+      </form>
+    </div>
+  </div>
+{% endblock %}

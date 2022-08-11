@@ -1,0 +1,33 @@
+{% extends "base_template.html" %}
+
+{% block title %}El muro de jp{% endblock %}
+
+{% block content %}
+    <h1>Artículos del muro</h1><br>
+    <ul>
+    {% for post in post_pagination.items %}
+        <li>
+            <a style="text-decoration:none" href="{{ url_for('public.show_post', slug=post.title_slug) }}">
+            {{ post.title }} &nbsp;&nbsp; <span class="postCreated"> {{ post.created|datetime }}</span>
+            </a>
+        </li>
+    {% else %}
+        <li>No hay entradas</li>
+    {% endfor %}
+    </ul>
+    <br>
+    <div class="pagination">
+        <a>Página(s): </a> 
+        {%- for page in post_pagination.iter_pages() %}
+            {% if page %}
+                {% if page != post_pagination.page %}
+                    <a href="{{ url_for('public.index', page=page) }}">{{ page }}</a>
+                {% else %}
+                    <strong>{{ page }}</strong>
+                {% endif %}
+            {% else %}
+                <span class=ellipsis>…</span>
+            {% endif %}
+        {%- endfor %}
+    </div>
+{% endblock %}

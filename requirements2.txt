@@ -1,0 +1,14 @@
+Click
+Flask
+Flask-Login
+Flask-SQLAlchemy
+Flask-WTF
+itsdangerous
+Jinja2
+MarkupSafe
+psycopg2
+python-slugify
+SQLAlchemy
+text-unidecode
+Werkzeug
+WTForms

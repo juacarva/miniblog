@@ -1,0 +1,288 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#container{
+    width: 100%;
+    background: white;
+}
+
+#usuario_actual {
+  text-align: right;
+  vertical-align: center;
+  height: 20px;
+  /* text-transform: uppercase; */
+  color: purple;
+  font-size: 20px;
+  padding-right: 20px;
+  margin: 0;
+}
+
+#encabezado {
+  padding: 20px;
+  padding-top: 0px;
+  height: auto;
+  width: auto;
+  text-align: center;
+  line-height: 50px;
+  border-bottom: solid rgb(252, 80, 80) 2px;
+  color: rgb(252, 80, 80);
+}
+
+#encabezado nav ul li a {
+  color:purple;
+}
+
+#titulo_blog {
+    text-align: center;
+    margin: 30px 0 30px;
+    font-size: 30px;
+    /* color: #4285F4; */
+    /* text-shadow: 2px 2px 4px #000000; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.clearfix{
+    clear: both;
+}
+
+
+/* nav li {
+    line-height: 50px;
+    height: 100%;
+    font-size: 15px;
+    display: flexbox;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    display:inline-flex;
+} */
+
+nav li {
+  display:inline-block;
+  width: 200px;
+}
+
+nav a {
+    line-height: 50px;
+    height: 100%;
+    font-size: 15px;
+    display:flexbox;
+    position: relative;
+    z-index: 1;
+    text-decoration:solid;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    /* color: white; */
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+}
+
+nav li:hover, nav li:active, nav li:focus {
+  background: rgb(248, 226, 226);
+}
+
+nav .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    transition: all .5s ease 0s;
+    border-radius: 8px;
+}
+  
+#content{
+  /* width: 100%; */
+  padding-left: 40px;
+  margin:60px;
+  min-height: 600px;
+}
+
+#content h1 {
+  margin:0px;
+  color:purple;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 45px ;
+}
+
+#content ul li {
+  margin-left:15px;
+  position: relative;
+  padding: 5px;
+}
+
+#content ul li a {
+  font-size: 25px;
+  color:purple;
+}
+
+#content ul li a:first-letter {
+  text-transform: capitalize;
+}
+
+.pagination {
+  bottom: 20px;
+  width: 100%;
+  text-align: left;
+  color: purple;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  display: flexbox;
+}
+
+.pagination a {
+    bottom: 20px;
+    width: 100%;
+    text-align: left;
+    color: purple;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    display: flexbox;
+  }
+    
+span {
+    color: rgb(252, 80, 80);
+}
+
+footer{
+    background: white;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    font-size: large;
+    color:purple;
+    font-style: italic;
+    font-family: 'Cherry Swash', cursive;
+    border-top: solid rgb(247, 136, 136) 2px;
+ }
+
+ /* @import url(https://fonts.googleapis.com/css?family=Roboto:300); */
+
+.login-page {
+    width: 500px;
+    margin: auto;
+}
+
+.register-page {
+    width: 500px;
+    padding: 0% 0 0;
+    margin: auto;
+}
+
+.contact-page {
+    width: 500px;
+    padding: 0% 0 0;
+    margin: auto;
+}
+
+.form {
+  position: relative;
+  z-index: 1;
+  /* background: #FFFFFF; */
+  background: white;
+  /* max-width: 360px; */
+  margin: 0 auto 100px;
+  padding-top: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 70px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.titulo_form {
+  text-align: center;
+  padding: 20px;
+  font-size: 25px;
+  color: purple;
+  /* text-shadow: 2px 2px 4px #000000; */
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.form input {
+  font-family: Arial, Helvetica, sans-serif;
+  outline: 0;
+  background: rgb(248, 226, 226);
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  /* border-radius: 8px; */
+}
+
+.form textarea {
+  resize: none;
+  font-family: Arial, Helvetica, sans-serif;
+  outline: 0;
+  background: rgb(248, 226, 226);
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  /* border-radius: 8px; */
+}
+
+.form button {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: rgb(131, 71, 131); 
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  /* border-radius: 8px; */
+}
+
+.form input[type=submit] {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: rgb(131, 71, 131); 
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.form button:hover,.form button:active,.form button:focus {
+  background: purple;
+}
+
+.form input[type=submit]:hover,.form input[type=submit]:active,.form input[type=submit]:focus {
+  background: purple;
+}
+
+.form .message {
+  margin: 15px 0 0;
+  color: purple;
+  font-size: 16px;
+}
+.form .message a {
+  color: purple;
+  font-weight: bold;
+  text-decoration: none;
+}
+.form .register-form {
+  display:block;
+}
+

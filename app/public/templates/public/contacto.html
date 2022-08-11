@@ -1,0 +1,17 @@
+{% extends 'base_template.html' %}
+
+{% block title %} Contacto {% endblock %}
+
+{% block content %}
+<div class="contact-page">
+  <div class="form">
+      <form class="contact-form">
+        <div class="titulo_form">FORMULARIO DE CONTACTO</h1></div>
+        <input type="text" placeholder="nombre" required="true"/>
+        <input type="email" placeholder="email" required="true"/>
+        <textarea name="mensaje" rows="5" placeholder="tu mensaje aquí..." required="true"></textarea>
+        <button>enviar mensaje</button>
+      </form>
+    </div>
+  </div>
+{% endblock %}

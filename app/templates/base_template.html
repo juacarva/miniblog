@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> {% block title %} {% endblock %} </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}" />
+    </head>
+    
+    <body>
+
+        <!-- <div class="clearfix">            
+        </div> -->
+
+        <div id="container">
+
+            <div id="encabezado">
+
+                <div id="usuario_actual">
+                    {% if current_user %}
+                    {{ current_user.name }}
+                    {% else %}
+                    {{current_user}}
+                    {% endif %}
+                </div>
+                <!-- <header> -->
+                    <div id="titulo_blog">
+                        <h1>EL MURO DE JP</h1>
+                    </div>
+                <!-- </header> -->
+                <nav>
+                    <ul class="user-info">
+                        {% if current_user.is_anonymous %}
+                            <li><a href="{{ url_for('public.index') }}">Home</a></li>
+                            <li><a href="{{ url_for('auth.login') }}">Login</a></li>
+                            <li><a href="{{ url_for('auth.show_signup_form') }}">Registrar</a></li>
+                            <li><a href="{{ url_for('public.contacto') }}">Contáctanos</a></li></li>
+                        {% else %}
+                            <li><a href="{{ url_for('public.index') }}">Home</a></li>
+                            {% if current_user.is_admin %}
+                                <li><a href="{{ url_for('admin.index') }}">Panel Admin</a></li>
+                            {% endif %}
+                            <li><a href="{{ url_for('public.contacto') }}">Contáctanos</a></li>
+                            <li><a href="{{ url_for('auth.logout') }}">Logout</a></li>
+                        {% endif %}
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- <div class="clearfix">            
+            </div> -->
+
+            <section id="content">
+                {% block content %} 
+                {% endblock %}
+            </section>
+
+            <!-- <div class="clearfix">            
+            </div> -->
+
+            <footer>
+                Derechos Reservados &copy; 2022
+            </footer>
+        </div>
+    </body>
+</html>
